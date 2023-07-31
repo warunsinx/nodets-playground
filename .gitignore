@@ -1,10 +1,6 @@
 # ignore keys and secrets
 .env
 
-# ignore package loack file
-yarn.lock
-package-lock.json
-
 # ignore dependency folders
 node_modules
 
