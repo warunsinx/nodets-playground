@@ -25,6 +25,9 @@ jobs:
       - run: npm run build
 
   release:
+    permissions:
+      id-token: write
+      contents: write
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     needs: [build]
