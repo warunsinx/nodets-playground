@@ -1,6 +1,6 @@
 {
   "name": "nodets-playground",
-  "version": "0.0.0-development",
+  "version": "1.4.0",
   "description": "",
   "main": "dist/index.js",
   "private": true,
