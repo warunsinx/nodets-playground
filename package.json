@@ -5,7 +5,15 @@
   "main": "dist/index.js",
   "private": true,
   "release": {
-      "branches": ["main"]
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      ["@semantic-release/git", {
+        "assets": ["package.json"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }]
+    ]
   },
   "scripts": {
     "build": "npx tsc",
@@ -29,6 +37,7 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
     "@types/express": "^4.17.17",
     "@types/node": "^20.4.5",
     "concurrently": "^8.2.0",
